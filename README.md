@@ -60,9 +60,10 @@ allowed to see, and how it decides.
 
 [coding-workflow](https://github.com/wlvh/coding-workflow) covers the **producer** side: a
 repository workflow in which the agent reconstructs project facts from committed code, config,
-tests, and artifacts, keeps edits minimal, and delivers changes as a reviewable draft PR built in an
-isolated clean worktree. Together they describe one position — a builder constrained by evidence,
-and an acceptor constrained by an information boundary.
+tests, and artifacts, and keeps edits minimal — and, when a PR is explicitly requested, delivers the
+change as a reviewable draft PR built in an isolated clean worktree. Together they form one
+end-to-end control loop: a builder constrained by evidence, and an acceptor constrained by an
+information boundary.
 
 Author: [github.com/wlvh](https://github.com/wlvh) · [huaweidata.com](https://huaweidata.com)
 
