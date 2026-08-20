@@ -53,8 +53,27 @@ This repository contains the pattern, toy examples, and evaluation design. It
 does not contain private production repositories, customer data, trading
 strategies, model credentials, or unpublished operational logs.
 
+## Related work
+
+This repository covers the **acceptor** side of an agentic coding workflow: what the verifier is
+allowed to see, and how it decides.
+
+[coding-workflow](https://github.com/wlvh/coding-workflow) covers the **producer** side: a
+repository workflow in which the agent reconstructs project facts from committed code, config,
+tests, and artifacts, and keeps edits minimal — and, when a PR is explicitly requested, delivers the
+change as a reviewable draft PR built in an isolated clean worktree. Together they form one
+end-to-end control loop: a builder constrained by evidence, and an acceptor constrained by an
+information boundary.
+
+Author: [github.com/wlvh](https://github.com/wlvh) · [huaweidata.com](https://huaweidata.com)
+
 ## Status
 
 Early public companion repo. The initial artifact is intentionally small:
 document the mechanism first, then add runnable toy evaluations once the public
 surface is stable.
+
+The benchmark and ablation in `eval/` are a **plan, not results**. No decision-accuracy, false-accept,
+or false-reject numbers have been produced yet, and none should be inferred from this repository.
+Whether withholding the builder transcript actually reduces framing bias is the hypothesis the
+ablation is designed to test — including the outcome where it does not.
